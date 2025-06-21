@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Konten Utama -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/purple_700"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            android:elevation="4dp"
+            app:title="Fish Weight Prediction" />
+
+        <!-- Konten Scrollable -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Spinner -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spesies Ikan"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:paddingTop="12dp" />
+
+                <Spinner
+                    android:id="@+id/spinner_species"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:padding="8dp" />
+
+                <!-- Length1 -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Panjang Vertikal"
+                    android:textStyle="bold"
+                    android:paddingTop="16dp" />
+
+                <SeekBar
+                    android:id="@+id/seek_length1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="515" />
+
+                <TextView
+                    android:id="@+id/label_length1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Value: 20.0"
+                    android:textColor="#555555" />
+
+                <!-- Length2 -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Panjang Diagonal"
+                    android:textStyle="bold"
+                    android:paddingTop="12dp" />
+
+                <SeekBar
+                    android:id="@+id/seek_length2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="550" />
+
+                <TextView
+                    android:id="@+id/label_length2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Value: 20.0"
+                    android:textColor="#555555" />
+
+                <!-- Length3 -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Panjang Garis Lurus"
+                    android:textStyle="bold"
+                    android:paddingTop="12dp" />
+
+                <SeekBar
+                    android:id="@+id/seek_length3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="592" />
+
+                <TextView
+                    android:id="@+id/label_length3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Value: 20.0"
+                    android:textColor="#555555" />
+
+                <!-- Height -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tinggi Ikan"
+                    android:textStyle="bold"
+                    android:paddingTop="12dp" />
+
+                <SeekBar
+                    android:id="@+id/seek_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="173" />
+
+                <TextView
+                    android:id="@+id/label_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Value: 10.0"
+                    android:textColor="#555555" />
+
+                <!-- Width -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lebar Ikan"
+                    android:textStyle="bold"
+                    android:paddingTop="12dp" />
+
+                <SeekBar
+                    android:id="@+id/seek_width"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="709" />
+
+                <TextView
+                    android:id="@+id/label_width"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Value: 5.0"
+                    android:textColor="#555555" />
+
+                <!-- Button -->
+                <Button
+                    android:id="@+id/button_predict"
+                    android:text="Prediksi Berat"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="@color/purple_700" />
+
+                <!-- TextView Hasil Prediksi -->
+                <TextView
+                    android:id="@+id/text_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hasil prediksi akan muncul di sini"
+                    android:textSize="18sp"
+                    android:textColor="#222222"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/drawer_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>
