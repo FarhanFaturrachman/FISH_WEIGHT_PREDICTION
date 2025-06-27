@@ -2,11 +2,14 @@ package com.example.fish_weight_prediction
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.method.LinkMovementMethod
 import android.view.MenuItem
+import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
+import androidx.core.text.HtmlCompat
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
@@ -38,6 +41,15 @@ class AboutActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
 
         navView.setNavigationItemSelectedListener(this)
         navView.setCheckedItem(R.id.nav_about)
+
+        // Menampilkan teks HTML pada TextView untuk bold teks
+        val datasetTextView = findViewById<TextView>(R.id.textViewDataset)
+        val datasetHtml = """
+            Dataset yang digunakan dalam aplikasi ini diambil dari website Kaggle yang dibuat oleh 
+            <b>Sushant B Mujagule</b> dengan judul <b>Fish Weight Prediction Dataset</b>.
+        """.trimIndent()
+        datasetTextView.text = HtmlCompat.fromHtml(datasetHtml, HtmlCompat.FROM_HTML_MODE_LEGACY)
+        datasetTextView.movementMethod = LinkMovementMethod.getInstance()
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -46,6 +58,7 @@ class AboutActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
             R.id.nav_feature -> Intent(this, FeatureActivity::class.java)
             R.id.nav_architecture -> Intent(this, ArchitectureActivity::class.java)
             R.id.nav_simulation -> Intent(this, MainActivity::class.java)
+            R.id.nav_dataset -> Intent(this, DatasetActivity::class.java)
             else -> null
         }
 

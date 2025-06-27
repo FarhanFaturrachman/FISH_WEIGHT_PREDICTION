@@ -6,42 +6,323 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Konten utama -->
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <!-- Toolbar -->
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/purple_700"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            android:elevation="4dp" />
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-        <!-- Konten scrollable -->
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="match_parent"
             android:padding="16dp">
 
-            <TextView
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Model ini menggunakan TensorFlow Lite dan menerima input berupa panjang, tinggi, dan lebar ikan serta jenis spesies. Model arsitektur terdiri dari beberapa dense layer yang telah dilatih untuk memprediksi berat ikan berdasarkan fitur-fitur tersebut."
-                android:textSize="16sp" />
+                android:layout_height="wrap_content">
+
+                <!-- TEXT + IMAGE 1 -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="20sp"
+                    android:text="Arsitektur Model" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="Arsitektur model yang digunakan dalam aplikasi ini adalah sebuah Artificial Neural Network (ANN) yang terdiri dari beberapa lapisan (layers). Model ini dibuat menggunakan pustaka TensorFlow dan Keras."/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="ANN digunakan karena kemampuannya dalam mempelajari hubungan non-linear antar fitur untuk menghasilkan prediksi nilai yang akurat, khususnya dalam kasus regresi seperti prediksi berat ikan."/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    android:text="1). Struktur Jaringan" />
+
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal">
+                    <ImageView
+                        android:src="@drawable/img1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="16dp" />
+                </HorizontalScrollView>
+
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="Penjelasan tiap layer:\n  Input Layer: menerima 6 inputan fitur hasil proses pre-processing.\n  Hidden Layer 1: berisi 64 neuron dengan aktivasi ReLU.\n  Hidden Layer 2: berisi 32 neuron dengan aktivasi ReLU.\n  Output Layer: 1 neuron tanpa aktivasi karena prediksi berupa nilai kontinu (regresi)."/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="20sp"
+                    android:text="Model Machine Learning" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    android:text="Pre-Processing\n1). Data Transform" />
+
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal">
+                    <ImageView
+                        android:src="@drawable/img2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="16dp" />
+                </HorizontalScrollView>
+
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="Pada dataset, terdapat kolom Species yang merupakan data bertipe objek (string). Karena model hanya dapat menerima data numerik, maka kolom ini perlu diubah menjadi bentuk numerik menggunakan Label Encoder."/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    android:text="2). Label dan Fitur" />
+
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal">
+
+                    <ImageView
+                        android:src="@drawable/img3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="16dp" />
+                </HorizontalScrollView>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="Setelah transformasi data, fitur (X) dan label (y) dipisahkan. Label Weight merupakan target yang ingin diprediksi."/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    android:text="3). Normalisasi Data" />
+
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal">
+
+                    <ImageView
+                        android:src="@drawable/img4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="16dp" />
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="Fitur-fitur dinormalisasi menggunakan StandardScaler agar berada dalam skala yang seragam. Ini penting agar proses pelatihan menjadi stabil dan konvergen dengan cepat."/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    android:text="4). Pemisahan Data" />
+
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal">
+
+                    <ImageView
+                        android:src="@drawable/img5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="16dp" />
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="Dataset dibagi menjadi:\nTraining Set (80%): untuk melatih model.\nTesting Set (20%): untuk menguji performa model."/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="20sp"
+                    android:text="Training Model" />
+
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal">
+
+                    <ImageView
+                        android:src="@drawable/img6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="16dp" />
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="Model dikompilasi dengan:\nOptimizer: Adam, digunakan karena cepat dan adaptif terhadap data.\nLoss Function: Mean Squared Error (MSE), digunakan untuk regresi.\nEpochs: 100 iterasi pelatihan.\nBatch size: 8 data per update bobot.\nValidation split: 20% data training digunakan untuk validasi model."/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="20sp"
+                    android:text="Akurasi Model" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="Model dievaluasi dengan dua metrik:"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    android:text="1). Mean Squared Error (MSE)" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="MSE menghitung rata-rata selisih kuadrat antara nilai aktual dan prediksi. Nilai MSE yang lebih kecil menunjukkan model lebih akurat."/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    android:text="2). R² Score" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="R² (koefisien determinasi) mengukur seberapa baik model menjelaskan variasi data target. Nilai mendekati 1 berarti model sangat baik."/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    android:text="Evaluasi:" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal">
+
+                    <ImageView
+                        android:src="@drawable/img7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:scaleType="fitCenter"
+                        android:layout_marginBottom="16dp" />
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    android:text="Hasil:" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="MSE: ~600–1000 (semakin kecil, semakin baik).\nR² Score: ~0.90–0.95 → model dapat menjelaskan lebih dari 90% variasi data target."/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    android:textSize="20sp"
+                    android:text="Kesimpulan" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="Arsitektur model terdiri dari 6 inputan, 2 hidden layer, dan 1 output layer.\nModel machine learning yang digunakan adalah ANN dengan fungsi aktivasi ReLU dan loss function MSE.\nModel menunjukkan performa sangat baik dengan R² Score di atas 90%, yang berarti model dapat diandalkan untuk memprediksi berat ikan."/>
+            </LinearLayout>
         </ScrollView>
     </LinearLayout>
 
-    <!-- Navigation Drawer dengan Header -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/drawer_menu" />
+        app:menu="@menu/drawer_menu"
+        app:headerLayout="@layout/nav_header_main" />
 </androidx.drawerlayout.widget.DrawerLayout>

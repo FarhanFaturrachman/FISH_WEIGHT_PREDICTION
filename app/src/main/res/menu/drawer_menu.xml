@@ -22,5 +22,10 @@
             android:id="@+id/nav_about"
             android:title="Tentang Aplikasi"
             android:icon="@drawable/baseline_info_24" />
+        <item
+            android:id="@+id/nav_dataset"
+            android:title="Dataset"
+            android:icon="@drawable/baseline_dataset_24"/>
+
     </group>
 </menu>

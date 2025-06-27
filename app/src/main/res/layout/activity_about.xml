@@ -23,7 +23,7 @@
             app:title="Tentang Aplikasi"
             app:titleTextColor="@android:color/white" />
 
-        <!-- Konten scrollable -->
+        <!-- ScrollView di bawah toolbar -->
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -47,23 +47,74 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
+                    android:textStyle="bold"
                     android:text="Versi: 1.0" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:text="Fish Weight Prediction adalah aplikasi memperkirakan berat ikan berdasarkan karakteristik fisik seperti panjang, tinggi, dan lebar menggunakan metode komputasi, yaitu dengan machine learning, yang bertujuan untuk menggantikan metode manual yang memerlukan alat ukur dengan solusi otomatis berbasis data. Dengan memanfaatkan data historis dan model prediktif seperti Artificial Neural Network (ANN), sistem ini dapat memberikan estimasi berat ikan secara cepat, akurat, dan efisien tanpa perlu menimbang secara langsung" />
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    android:text="Storyline:" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="Aplikasi Fish Weight Prediction dikembangkan untuk membantu memprediksi berat ikan secara otomatis hanya berdasarkan input karakteristik fisik seperti panjang, tinggi, dan lebar ikan. Proses ini memanfaatkan teknologi Machine Learning, khususnya Artificial Neural Network (ANN), yang telah dilatih menggunakan dataset historis. Tujuannya adalah untuk menyediakan alternatif pengukuran yang cepat dan efisien dibandingkan metode manual dengan alat timbang. Aplikasi ini sangat bermanfaat untuk pelaku industri perikanan, peternak ikan, dan peneliti yang ingin mengetahui estimasi berat ikan secara praktis dan modern." />
+
+                <!-- TextView dengan teks HTML (harus di-set dari Kotlin agar bold muncul) -->
+                <TextView
+                    android:id="@+id/textViewDataset"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="16dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    android:text="Link Dataset:" />
+
+                <!-- Link bisa diklik langsung -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoLink="web"
+                    android:textColorLink="@color/purple_700"
+                    android:text="https://www.kaggle.com/datasets/sushantbmujagule/fish-weight-prediction-dataset/data"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    android:text="Cara Kerja Aplikasi:" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="Pengguna cukup memasukkan panjang, tinggi, dan lebar ikan ke dalam form aplikasi. Setelah itu, data akan diproses oleh model TFLite di dalam aplikasi, dan hasil prediksi berat ikan akan langsung ditampilkan. Aplikasi ini ideal digunakan oleh nelayan, pelaku industri perikanan, atau peneliti yang memerlukan estimasi berat ikan tanpa harus menimbang secara langsung." />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dikembangkan oleh:\nFarhan Faturrachman\nSTTWASTUKANCANA" />
+                    android:textStyle="bold"
+                    android:text="Dikembangkan oleh:"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Farhan Faturrachman\nSTTWASTUKANCANA" />
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
 
-    <!-- Navigation Drawer dengan Header -->
+    <!-- Navigation Drawer -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"

@@ -30,6 +30,7 @@
         <activity android:name=".AboutActivity" />
         <activity android:name=".FeatureActivity" />
         <activity android:name=".ArchitectureActivity" />
+        <activity android:name=".DatasetActivity" />
     </application>
 
 </manifest>

@@ -127,6 +127,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_about -> Intent(this, AboutActivity::class.java)
             R.id.nav_feature -> Intent(this, FeatureActivity::class.java)
             R.id.nav_architecture -> Intent(this, ArchitectureActivity::class.java)
+            R.id.nav_dataset -> Intent(this, DatasetActivity::class.java)
             R.id.nav_simulation -> null
             else -> null
         }

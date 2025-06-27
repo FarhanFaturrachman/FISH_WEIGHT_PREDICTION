@@ -52,7 +52,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Panjang Vertikal"
+                    android:text="Panjang Vertikal Ikan"
                     android:textStyle="bold"
                     android:paddingTop="16dp" />
 
@@ -73,7 +73,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Panjang Diagonal"
+                    android:text="Panjang Diagonal Ikan"
                     android:textStyle="bold"
                     android:paddingTop="12dp" />
 
@@ -94,7 +94,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Panjang Garis Lurus"
+                    android:text="Panjang Garis Lurus Ikan"
                     android:textStyle="bold"
                     android:paddingTop="12dp" />
 
