@@ -50,6 +50,8 @@ class FeatureActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
             R.id.nav_architecture -> Intent(this, ArchitectureActivity::class.java)
             R.id.nav_simulation -> Intent(this, MainActivity::class.java)
             R.id.nav_dataset -> Intent(this, DatasetActivity::class.java)
+            R.id.nav_simulation -> Intent(this, SimulasiActivity::class.java)
+            R.id.nav_beranda -> Intent(this, MainActivity::class.java)
             R.id.nav_feature -> null // Sudah di sini
             else -> {
                 Toast.makeText(this, "Menu tidak dikenali", Toast.LENGTH_SHORT).show()

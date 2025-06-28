@@ -4,28 +4,28 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_beranda"
+            android:title="Beranda"
+            android:icon="@drawable/ic_home" />
+        <item
             android:id="@+id/nav_simulation"
             android:title="Simulasi"
-            android:icon="@drawable/baseline_calculate_24" />
-
+            android:icon="@drawable/ic_science"/>
         <item
             android:id="@+id/nav_feature"
             android:title="Fitur"
-            android:icon="@drawable/baseline_featured_play_list_24" />
-
+            android:icon="@drawable/ic_star" />
         <item
             android:id="@+id/nav_architecture"
             android:title="Arsitektur Model"
-            android:icon="@drawable/baseline_dataset_24" />
-
-        <item
-            android:id="@+id/nav_about"
-            android:title="Tentang Aplikasi"
-            android:icon="@drawable/baseline_info_24" />
+            android:icon="@drawable/ic_account_tree" />
         <item
             android:id="@+id/nav_dataset"
             android:title="Dataset"
-            android:icon="@drawable/baseline_dataset_24"/>
-
+            android:icon="@drawable/ic_storage"/>
+        <item
+            android:id="@+id/nav_about"
+            android:title="Tentang Aplikasi"
+            android:icon="@drawable/ic_info" />
     </group>
 </menu>

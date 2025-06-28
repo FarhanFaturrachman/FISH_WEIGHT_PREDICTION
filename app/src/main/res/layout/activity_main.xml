@@ -5,13 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Konten Utama -->
+    <!-- MAIN CONTENT -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <!-- Toolbar -->
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -20,165 +19,56 @@
             android:theme="@style/ThemeOverlay.AppCompat.Light"
             android:elevation="4dp"
             app:title="Fish Weight Prediction" />
-
-        <!-- Konten Scrollable -->
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="16dp">
 
             <LinearLayout
-                android:orientation="vertical"
-                android:padding="16dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
 
-                <!-- Spinner -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Spesies Ikan"
+                    android:text="Selamat Datang di Aplikasi"
+                    android:textSize="24sp"
                     android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fish Weight Prediction"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple_700"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:textSize="16sp"
-                    android:paddingTop="12dp" />
-
-                <Spinner
-                    android:id="@+id/spinner_species"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:drawable/btn_dropdown"
-                    android:padding="8dp" />
-
-                <!-- Length1 -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Panjang Vertikal Ikan"
-                    android:textStyle="bold"
-                    android:paddingTop="16dp" />
-
-                <SeekBar
-                    android:id="@+id/seek_length1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:max="515" />
-
-                <TextView
-                    android:id="@+id/label_length1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Value: 20.0"
-                    android:textColor="#555555" />
-
-                <!-- Length2 -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Panjang Diagonal Ikan"
-                    android:textStyle="bold"
-                    android:paddingTop="12dp" />
-
-                <SeekBar
-                    android:id="@+id/seek_length2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:max="550" />
-
-                <TextView
-                    android:id="@+id/label_length2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Value: 20.0"
-                    android:textColor="#555555" />
-
-                <!-- Length3 -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Panjang Garis Lurus Ikan"
-                    android:textStyle="bold"
-                    android:paddingTop="12dp" />
-
-                <SeekBar
-                    android:id="@+id/seek_length3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:max="592" />
-
-                <TextView
-                    android:id="@+id/label_length3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Value: 20.0"
-                    android:textColor="#555555" />
-
-                <!-- Height -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Tinggi Ikan"
-                    android:textStyle="bold"
-                    android:paddingTop="12dp" />
-
-                <SeekBar
-                    android:id="@+id/seek_height"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:max="173" />
-
-                <TextView
-                    android:id="@+id/label_height"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Value: 10.0"
-                    android:textColor="#555555" />
-
-                <!-- Width -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Lebar Ikan"
-                    android:textStyle="bold"
-                    android:paddingTop="12dp" />
-
-                <SeekBar
-                    android:id="@+id/seek_width"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:max="709" />
-
-                <TextView
-                    android:id="@+id/label_width"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Value: 5.0"
-                    android:textColor="#555555" />
-
-                <!-- Button -->
-                <Button
-                    android:id="@+id/button_predict"
-                    android:text="Prediksi Berat"
-                    android:textStyle="bold"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:textColor="@android:color/white"
-                    android:backgroundTint="@color/purple_700" />
-
-                <!-- TextView Hasil Prediksi -->
-                <TextView
-                    android:id="@+id/text_result"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Hasil prediksi akan muncul di sini"
-                    android:textSize="18sp"
-                    android:textColor="#222222"
+                    android:textAlignment="center"
                     android:gravity="center"
-                    android:layout_marginTop="20dp" />
+                    android:layout_marginBottom="24dp"
+                    android:text="Aplikasi Fish Weight Prediction dirancang untuk membantu pengguna dalam memperkirakan berat ikan berdasarkan beberapa parameter fisik seperti panjang, tinggi, dan lebar. Dengan memanfaatkan teknologi Artificial Intelligence dan model TensorFlow Lite, aplikasi ini dapat memberikan prediksi berat ikan secara instan, akurat, dan efisien. Aplikasi ini sangat berguna bagi pelajar, peneliti, maupun praktisi di bidang perikanan yang ingin mengimplementasikan teknologi cerdas untuk kebutuhan analisis biometrik ikan." />
 
+                <Button
+                    android:id="@+id/button_start_simulation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mulai Simulasi"
+                    android:padding="12dp"
+                    android:backgroundTint="@color/purple_700"
+                    android:textColor="@android:color/white" />
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
 
+    <!-- NAVIGATION DRAWER -->
     <!-- Navigation Drawer -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"

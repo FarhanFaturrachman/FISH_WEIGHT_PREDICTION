@@ -12,25 +12,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FISH_WEIGHT_PREDICTION"
         tools:targetApi="31">
-
         <!-- SplashActivity sebagai launcher -->
         <activity
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- MainActivity tanpa launcher -->
+        </activity> <!-- MainActivity tanpa launcher -->
         <activity
             android:name=".MainActivity"
             android:exported="true" />
-        <activity android:name=".AboutActivity" />
-        <activity android:name=".FeatureActivity" />
-        <activity android:name=".ArchitectureActivity" />
-        <activity android:name=".DatasetActivity" />
+        <activity android:name=".AboutActivity" android:exported="true" />
+        <activity android:name=".FeatureActivity" android:exported="true" />
+        <activity android:name=".ArchitectureActivity" android:exported="true" />
+        <activity android:name=".DatasetActivity" android:exported="true" />
+        <activity android:name=".SimulasiActivity" android:exported="true" />
     </application>
 
 </manifest>

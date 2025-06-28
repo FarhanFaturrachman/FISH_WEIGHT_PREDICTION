@@ -39,9 +39,8 @@ android {
 }
 
 dependencies {
+    // Gunakan satu versi stabil
     implementation("org.tensorflow:tensorflow-lite:2.16.1")
-    implementation("org.tensorflow:tensorflow-lite:0.0.0-nightly")
-    implementation("org.tensorflow:tensorflow-lite:2.12.0")
     implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.cardview:cardview:1.0.0")
 

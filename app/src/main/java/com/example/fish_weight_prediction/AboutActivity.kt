@@ -59,6 +59,8 @@ class AboutActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
             R.id.nav_architecture -> Intent(this, ArchitectureActivity::class.java)
             R.id.nav_simulation -> Intent(this, MainActivity::class.java)
             R.id.nav_dataset -> Intent(this, DatasetActivity::class.java)
+            R.id.nav_simulation -> Intent(this, SimulasiActivity::class.java)
+            R.id.nav_beranda -> Intent(this, MainActivity::class.java)
             else -> null
         }
 
