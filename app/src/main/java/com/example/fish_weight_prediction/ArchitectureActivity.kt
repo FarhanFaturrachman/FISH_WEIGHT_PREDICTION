@@ -109,7 +109,6 @@ class ArchitectureActivity : AppCompatActivity(), NavigationView.OnNavigationIte
         val intent = when (item.itemId) {
             R.id.nav_about -> Intent(this, AboutActivity::class.java)
             R.id.nav_feature -> Intent(this, FeatureActivity::class.java)
-            R.id.nav_simulation -> Intent(this, MainActivity::class.java)
             R.id.nav_dataset -> Intent(this, DatasetActivity::class.java)
             R.id.nav_simulation -> Intent(this, SimulasiActivity::class.java)
             R.id.nav_beranda -> Intent(this, MainActivity::class.java)

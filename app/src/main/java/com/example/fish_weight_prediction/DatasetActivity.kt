@@ -120,7 +120,6 @@ class DatasetActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
             R.id.nav_about -> Intent(this, AboutActivity::class.java)
             R.id.nav_feature -> Intent(this, FeatureActivity::class.java)
             R.id.nav_architecture -> Intent(this, ArchitectureActivity::class.java)
-            R.id.nav_simulation -> Intent(this, MainActivity::class.java)
             R.id.nav_simulation -> Intent(this, SimulasiActivity::class.java)
             R.id.nav_beranda -> Intent(this, MainActivity::class.java)
             R.id.nav_dataset -> null // already here
