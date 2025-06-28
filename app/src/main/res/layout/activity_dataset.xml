@@ -72,6 +72,21 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal" />
                 </HorizontalScrollView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"
+                    android:text="Link Dataset:" />
+
+                <!-- Link bisa diklik langsung -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoLink="web"
+                    android:textColorLink="@color/purple_700"
+                    android:text="https://www.kaggle.com/datasets/sushantbmujagule/fish-weight-prediction-dataset/data"
+                    android:layout_marginBottom="16dp"/>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

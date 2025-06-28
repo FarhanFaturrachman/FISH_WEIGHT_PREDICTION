@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.drawerArrowDrawable.color = ContextCompat.getColor(this, android.R.color.white)
 
         navView.setNavigationItemSelectedListener(this)
-        navView.setCheckedItem(R.id.nav_simulation)
+        navView.setCheckedItem(R.id.nav_beranda)
 
         val btnStart = findViewById<Button>(R.id.button_start_simulation)
         btnStart.setOnClickListener {
@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_architecture -> Intent(this, ArchitectureActivity::class.java)
             R.id.nav_dataset -> Intent(this, DatasetActivity::class.java)
             R.id.nav_simulation -> Intent(this, SimulasiActivity::class.java)
-
+            R.id.nav_beranda -> null//
             else -> null
         }
 
