@@ -44,7 +44,6 @@ class ArchitectureActivity : AppCompatActivity(), NavigationView.OnNavigationIte
         navView.setNavigationItemSelectedListener(this)
         navView.setCheckedItem(R.id.nav_architecture)
 
-        // SET BOLD TEXT FOR MULTIPLE TEXTVIEWS
         setBoldText(
             R.id.textView1,
             "Arsitektur model yang digunakan dalam aplikasi ini adalah sebuah Artificial Neural Network (ANN) yang terdiri dari beberapa lapisan (layers). Model ini dibuat menggunakan pustaka TensorFlow dan Keras.",

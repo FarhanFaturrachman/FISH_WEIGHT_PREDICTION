@@ -20,17 +20,14 @@ class FeatureActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_feature)
 
-        // Setup Toolbar
+
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
-        // Judul toolbar diambil dari XML: app:title="Fitur"
         toolbar.setTitleTextColor(ContextCompat.getColor(this, android.R.color.white))
 
-        // Setup DrawerLayout dan NavigationView
         drawerLayout = findViewById(R.id.drawer_layout)
         val navView = findViewById<NavigationView>(R.id.nav_view)
 
-        // Setup toggle drawer (ikon hamburger)
         val toggle = ActionBarDrawerToggle(
             this, drawerLayout, toolbar,
             R.string.navigation_drawer_open,
@@ -41,7 +38,7 @@ class FeatureActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
         toggle.drawerArrowDrawable.color = ContextCompat.getColor(this, android.R.color.white)
 
         navView.setNavigationItemSelectedListener(this)
-        navView.setCheckedItem(R.id.nav_feature) // Aktifkan menu "fitur"
+        navView.setCheckedItem(R.id.nav_feature)
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -52,7 +49,7 @@ class FeatureActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
             R.id.nav_dataset -> Intent(this, DatasetActivity::class.java)
             R.id.nav_simulation -> Intent(this, SimulasiActivity::class.java)
             R.id.nav_beranda -> Intent(this, MainActivity::class.java)
-            R.id.nav_feature -> null // Sudah di sini
+            R.id.nav_feature -> null
             else -> {
                 Toast.makeText(this, "Menu tidak dikenali", Toast.LENGTH_SHORT).show()
                 null
@@ -61,7 +58,7 @@ class FeatureActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
 
         targetIntent?.let {
             startActivity(it)
-            finish() // agar tidak menumpuk Activity
+            finish()
         }
 
         drawerLayout.closeDrawer(GravityCompat.START)
@@ -72,7 +69,6 @@ class FeatureActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START)
         } else {
-            // Kembali ke MainActivity
             val intent = Intent(this, MainActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)

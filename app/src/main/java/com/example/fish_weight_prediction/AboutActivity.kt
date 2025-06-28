@@ -22,7 +22,6 @@ class AboutActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about)
 
-        // Setup Toolbar dan Drawer
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         toolbar.setTitleTextColor(ContextCompat.getColor(this, android.R.color.white))
         toolbar.title = "Tentang Aplikasi"
@@ -42,7 +41,6 @@ class AboutActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
         navView.setNavigationItemSelectedListener(this)
         navView.setCheckedItem(R.id.nav_about)
 
-        // Menampilkan teks HTML pada TextView untuk bold teks
         val datasetTextView = findViewById<TextView>(R.id.textViewDataset)
         val datasetHtml = """
             Dataset yang digunakan dalam aplikasi ini diambil dari website Kaggle yang dibuat oleh 

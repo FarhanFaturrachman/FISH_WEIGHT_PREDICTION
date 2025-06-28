@@ -6,13 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Konten utama -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <!-- Toolbar -->
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -23,7 +21,6 @@
             app:title="Tentang Aplikasi"
             app:titleTextColor="@android:color/white" />
 
-        <!-- ScrollView di bawah toolbar -->
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -63,7 +60,6 @@
                     android:layout_marginBottom="16dp"
                     android:text="Aplikasi Fish Weight Prediction dikembangkan untuk membantu memprediksi berat ikan secara otomatis hanya berdasarkan input karakteristik fisik seperti panjang, tinggi, dan lebar ikan. Proses ini memanfaatkan teknologi Machine Learning, khususnya Artificial Neural Network (ANN), yang telah dilatih menggunakan dataset historis. Tujuannya adalah untuk menyediakan alternatif pengukuran yang cepat dan efisien dibandingkan metode manual dengan alat timbang. Aplikasi ini sangat bermanfaat untuk pelaku industri perikanan, peternak ikan, dan peneliti yang ingin mengetahui estimasi berat ikan secara praktis dan modern." />
 
-                <!-- TextView dengan teks HTML (harus di-set dari Kotlin agar bold muncul) -->
                 <TextView
                     android:id="@+id/textViewDataset"
                     android:layout_width="match_parent"
@@ -77,7 +73,6 @@
                     android:layout_marginBottom="4dp"
                     android:text="Link Dataset:" />
 
-                <!-- Link bisa diklik langsung -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -114,7 +109,6 @@
         </ScrollView>
     </LinearLayout>
 
-    <!-- Navigation Drawer -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"

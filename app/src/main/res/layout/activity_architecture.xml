@@ -28,7 +28,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <!-- TEXT + IMAGE 1 -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

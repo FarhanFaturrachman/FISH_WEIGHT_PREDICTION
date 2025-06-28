@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     android:background="@android:color/white">
 
-    <!-- Logo -->
     <ImageView
         android:id="@+id/splash_logo"
         android:layout_width="150dp"
@@ -14,7 +13,6 @@
         android:src="@drawable/fish"
         android:contentDescription="Logo Aplikasi" />
 
-    <!-- Teks Judul -->
     <TextView
         android:id="@+id/splash_text"
         android:layout_width="wrap_content"
